@@ -7,7 +7,7 @@
     "dev": "NODE_ENV=development next",
     "build": "NODE_ENV=production next build",
     "export": "NODE_ENV=production next export",
-    "out": "NODE_ENV=production rimraf ./.next && next build && next export",
+    "out": "NODE_ENV=production rimraf ./.next && next build && next export && npm run copy-out",
     "copy-out": "cp -a ./out/. ../lolfreebies.github.io/ && ECHO 'Now commit changes in ../lolfreebies.github.io/ and push to repo to publish in production.'",
     "start": "next start",
     "test": "jest"
