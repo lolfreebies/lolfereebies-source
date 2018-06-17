@@ -1,0 +1,35 @@
+{
+  "name": "example-next",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "dev": "NODE_ENV=development next",
+    "build": "NODE_ENV=production next build",
+    "export": "NODE_ENV=production next export",
+    "out": "NODE_ENV=production rimraf ./.next && next build && next export",
+    "copy-out": "cp -a ./out/. ../lolfreebies.github.io/ && ECHO 'Now commit changes in ../lolfreebies.github.io/ and push to repo to publish in production.'",
+    "start": "next start",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "css-loader": "^0.28.9",
+    "jest": "^23.1.0",
+    "react-test-renderer": "^16.2.0",
+    "rimraf": "^2.6.2",
+    "style-loader": "^0.21.0"
+  },
+  "dependencies": {
+    "@zeit/next-sass": "^0.2.0",
+    "autoprefixer": "^8.6.2",
+    "next": "^6.0.3",
+    "node-sass": "^4.9.0",
+    "orderby": "^1.1.0",
+    "postcss-loader": "^2.1.5",
+    "prop-types": "^15.6.0",
+    "qs": "^6.5.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-instantsearch": "^5.1.0"
+  }
+}

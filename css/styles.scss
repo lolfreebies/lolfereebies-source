@@ -1,0 +1,234 @@
+@import '../components/Variables';
+@import '../components/Navbar';
+@import '../components/LeftDrawer';
+
+input:focus {
+  outline: none;
+}
+
+.img-fluid {
+  max-width: 100%;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #F8FAFF;
+  color: #182359;
+  font-family: sans-serif;
+}
+
+.main-content {
+  // margin-top: -80px;
+  // margin-left: -10px;
+  margin-top: 130px;
+  transition: padding-left $transition-speed ease;
+  &.LeftDrawerOpen {
+    padding-left: $left-drawer-width + 10px;
+  }
+}
+
+.blue-backdrop {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  background-color: lighten($brand-primary, 8%); // @notice - because gradient
+}
+
+// .item {
+li.ais-Hits-item {
+  // ais algolia-min.css resets
+  margin-top: 0 !important;
+  margin-left: 0 !important;
+  padding: 0 !important;
+  width: 100%;
+  // border: 1px solid #c4c8d8;
+  // box-shadow: 0 2px 5px 0 #e3e5ec;
+
+  // float: left;
+  position: relative;
+  display: inline-block;
+  // width: 32.2%;
+  width: 100%;
+  height: 450px;
+  overflow: hidden;
+  overflow-y: auto;
+  margin-left: 5px; // @todo media queries, bigger larger
+  margin-bottom: 10px;
+  // border: 2px solid #eee;
+  border: 6px solid #fff !important;
+  // padding: 25px 15px 25px 15px;
+  border-radius: 9px;
+  box-shadow: 2px 2px 30px rgba(0,0,0,0.15) !important;
+  background-image: linear-gradient(to top, #fafafa 0, #fefefe 60%, #ffffff 40%);
+
+  .body {
+    padding: 5px;
+  }
+  p.image {
+    width: 100%;
+    margin: 0;
+  }
+  .img {
+    display: block;
+    margin: 0 auto;
+    width: 120px;
+  }
+  a.blurb {
+    font-size: 13px;
+    display: block;
+    padding: 4px;
+    text-align: center;
+    border: 1px solid lightgray;
+    margin: 10px 0;
+    text-decoration: none;
+    &:hover {
+      background-color: #eee;
+    }
+    i.fa-external-link {
+      margin-left: 5px;
+    }
+  }
+}
+
+p.full-size {
+  padding: 0;
+  margin: 0;
+  // background-image: url('http://via.placeholder.com/350x150');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 150px;
+  border-radius: 6px;
+}
+
+p {
+  margin-top: 20px;
+  line-height: 1.25 !important;
+  &.link a {
+    font-size: 13px;
+    font-weight: 400;
+    color: #0066c0;
+    word-break: break-all;
+  }
+}
+
+p.sponsored {
+  color: gray;
+  font-size: 14px;
+  // font-weight: bold;
+  margin: 0;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: right;
+  // border: 1px solid lightgray;
+  i {
+    padding: 8px;
+    border: 1px solid lightgray;
+    // margin: 4px;
+  }
+  i.fa-share {
+    border-bottom-right-radius: 9px;
+  }
+}
+
+.advertisement-1 {
+  display: inline-block;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+
+}
+
+// ais overrides
+.ais-Hits {
+  color: inherit !important;
+}
+
+// [class^=ais-] {
+//   font-size: 1rem;
+//   box-sizing: border-box;
+// }
+
+.ais-Hits-list {
+  // margin-top: inherit !important;
+  // margin-left: inherit !important;
+  margin: 0 !important;
+  display: block !important;
+  -ms-flex-wrap: inherit !important;
+  flex-wrap: inherit !important;
+  padding: 0 !important;
+  list-style: none !important;
+  color: inherit !important;
+}
+
+.ais-RefinementList {
+  color: #555;
+}
+
+.ais-SearchBox-submit {
+  left: 7px;
+}
+
+// Footer
+
+footer {
+  margin-top: 25px;
+}
+
+
+// Media Queries
+@media screen and (min-width: 620px) {
+  li.ais-Hits-item {
+    width: 48%;
+    margin-left: 5px !important;
+  }
+  .main-content {
+    margin-top: 111px;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  li.ais-Hits-item {
+    width: 32%;
+    margin-left: 5px !important;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  li.ais-Hits-item {
+    width: 23.7%;
+    margin-left: 5px !important;
+  }
+}
+
+@media screen and (min-width: 1260px) {
+  li.ais-Hits-item {
+    width: 19.10%;
+    margin-left: 5px !important;
+  }
+}
+
+@media screen and (min-width: 1460px) {
+  li.ais-Hits-item {
+    width: 15.94%;
+  }
+}
+
+// App.css
+.full-size {
+  cursor: pointer;
+}
+
+.contribute {
+  color: gray;
+  font-size: 13px;
+}

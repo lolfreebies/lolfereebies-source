@@ -1,0 +1,163 @@
+#Navbar.below-fold #Navbar-wrapper {
+  padding: 10px;
+}
+
+#Navbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1000;
+  transform: translateZ(0);
+  // box-shadow: 0 11px 20px 0 rgba(0, 0, 0, 0.030);
+  background-color: $brand-primary;
+  border-top: 3px solid #0784ec;
+  background-image: linear-gradient(to top, lighten($brand-primary, 8%), $brand-primary);
+
+  .logo-container {
+    width: 120px;
+  }
+
+  #Navbar-wrapper {
+    position: relative;
+    min-width: 0;
+    // padding: 10px 16px 10px 16px;
+    padding: 10px;
+    transition: padding 0.2s ease;
+
+    #Navbar-inner {
+      margin: 0 auto;
+
+      #logo {
+        float: left;
+        position: relative;
+        width: 197px;
+        // margin-top: 2px;
+        margin-bottom: 4px;
+
+        span#LeftDrawer-toggle {
+          float: left;
+          color: white;
+          font-size: 25px;
+          // border: 1px solid lightgray;
+          padding: 6px 11px;
+          cursor: pointer;
+          // border-radius: 3px;
+
+          // &:hover, &:active, &.active {
+          //   color: white;
+          //   background-color: $brand-primary;
+          //   border: 1px solid $brand-primary;
+          // }
+          .fa.fa-bars {
+            border: none;
+          }
+        }
+      }
+
+      #Navbar-content {
+        display: inline-block;
+        position: relative;
+        width: 81%;
+        margin: 0;
+        .ais-SearchBox {
+          width: 100%;
+        }
+        .ais-SearchBox-input {
+          padding: 11px 30px;
+          width: 100%;
+          position: relative;
+          background-color: #fff;
+          border: 1px solid #c4c8d8;
+          border-radius: 5px;
+        }
+
+        .giveaways-icon {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          right: -49px;
+          z-index: 10001;
+          color: white;
+          font-size: 40px;
+          cursor: pointer;
+          &:hover {
+            color: #ffdd6e;
+          }
+        }
+        .badge {
+          position: absolute;
+          bottom: -2px;
+          right: -2px;
+          font-family: sans-serif;
+          border: 2px solid white;
+          border-radius: 100%;
+          color: white;
+          background-color: black;
+          font-size: 11px;
+          padding: 1px 4px;
+        }
+
+      }
+    }
+  }
+}
+
+#app-title {
+  // $logo-gray: #7d7d7d;
+  // $border-gray: #b3b3b3;
+  $border-gray: #a9a9a9;
+  display: inline-block;
+  // margin: 0 5px 0 24px;
+  margin: 0 0 0 15px;
+  cursor: pointer;
+  // a {
+  //   color: $logo-gray;
+  // }
+
+  // span.words {
+  //   padding: 1px 4px;
+  //   text-transform: uppercase;
+  //   font-size: 18px;
+  //   // letter-spacing: -0.1px;
+  //   letter-spacing: 0.5px;
+  //   font-family: 'Helvetica Neue', 'Arial', 'sans-serif';
+  // }
+  // span.rig {
+  //   background-color: $brand-primary;
+  //   border: 1px solid $brand-primary;
+  //   border-right: none;
+  //   color: white;
+  //   padding-right: 5px;
+  // }
+  // span.config {
+  //   background-color: white;
+  //   color: $logo-gray;
+  //   border-top: 1px solid $border-gray;
+  //   border-right: 1px solid $border-gray;
+  //   border-bottom: 1px solid $border-gray;
+  //   border-left: none;
+  //   padding-right: 5px;
+  //   padding-left: 3px;
+  //   i.fa {
+  //     color: lighten($logo-gray, 5%);
+  //     transform: rotate(33deg); // illuminati confirmed.. (⌐■_■)
+  //   }
+  // }
+}
+
+// Media Queries
+@media screen and (min-width: 620px) {
+  #Navbar #Navbar-wrapper {
+    padding: 30px 16px 30px 16px;
+  }
+
+  #Navbar #Navbar-wrapper #Navbar-inner #logo {
+    margin-bottom: 0;
+  }
+
+  #Navbar #Navbar-wrapper #Navbar-inner #Navbar-content {
+    width: 56%;
+  }
+
+}

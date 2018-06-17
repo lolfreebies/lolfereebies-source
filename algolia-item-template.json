@@ -1,0 +1,16 @@
+{
+  "title": "Free Seventeen Magazine",
+  "img": "seventeen-magazine-copy.png",
+  "desc": "This is the description for this post.",
+  "added": "1527983676895",
+  "region": [
+    "ALL"
+  ],
+  "link": "http://cdn.mercurymagazines.com/121-12198144/index.html?",
+  "type": "freebie",
+  "category": "Magazines",
+  "expired": false
+}
+
+
+// new Date.now()
