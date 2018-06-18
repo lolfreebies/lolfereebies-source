@@ -1,5 +1,5 @@
 import React from 'react';
-import { SearchBox } from 'react-instantsearch/dom';
+import { SearchBox, PoweredBy } from 'react-instantsearch/dom';
 
 export default ({handleLeftDrawerToggle, scrollstate}) =>
   <div id="Navbar" className={scrollstate}>
@@ -17,6 +17,7 @@ export default ({handleLeftDrawerToggle, scrollstate}) =>
             <span className="badge">1</span>
           </div> */}
           <SearchBox translations={{placeholder: "Search for freebies..."}} autoFocus={true} />
+          <PoweredBy />
         </div>
       </div>
     </div>
