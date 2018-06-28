@@ -21,7 +21,7 @@ const HitComponent = ({ hit }) => (
     <p className="full-size" onClick={e => window.open(hit.link, '_blank')} style={{backgroundImage: `url('/static/img/${hit.img}')`}}></p>
     <div className="body">
       {/* <p className="sponsored">Sponsored</p> */}
-      <a className="blurb" href={`${hit.link}`} target="_blank">1 month of service <i className="fa fa-external-link"></i></a>
+      <a className="blurb" href={`${hit.link}`} target="_blank">Claim Freebie <i className="fa fa-external-link"></i></a>
       {/* <p className="link"><a href={`${hit.link}`}>Old Mother Hubbard Classic Crunchy Natural Dog Treats, Extra Tasty Assortment Mini Biscuits, 20-Ounce Bag</a></p> */}
       {/* <p className="hit-type"><Highlight attribute="name" hit={hit} /></p> */}
       <p className="type"><b><i>{hit.type}</i></b>: {hit.category}</p>
